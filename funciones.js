@@ -6,8 +6,8 @@ function siempreTrue(){
 siempreTrue();
 
 //Una función asíncrona que utilice un setTimeout y pase por consola un "Hola soy una promesa" 5 segundos después de haberse ejecutado
-function asinc_Hola(){
-    setTimeout(() => {
+async function asinc_Hola(){
+    return setTimeout(() => {
         console.log("Hola soy una promesa")
     }, 5000);
 }
@@ -17,8 +17,7 @@ asinc_Hola()
 function* idPares() {
     let id = 0;
     while (true) {
-        id += 2;
-        yield id;
+        yield id += 2;
     }
     
 }
